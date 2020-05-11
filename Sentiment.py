@@ -39,16 +39,11 @@ def sentiment_script():
                 d = {'Tweet':[text], 'Username':[screen_name], 'Polarity':[blob.sentiment.polarity]}
                 df = pd.DataFrame(data=d)
 
-
-
-
-
-                #print(df)
-
                 final = final.append(df)
 
         print(final)
         print(final.mean())
+        
 #t = Timer(secs, sentiment_script())
 #t.start()
 
