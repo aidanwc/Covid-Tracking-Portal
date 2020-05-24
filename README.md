@@ -1,3 +1,3 @@
 # Covid-Sentiment-Analysis
-A sentiment analysis tracker for Covid-19. Analyzing the daily sentiment of tweets related to COVID-19.
+A React front-end that fetches the daily number of Covid cases worldwide
  
