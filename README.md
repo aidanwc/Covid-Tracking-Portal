@@ -1,4 +1,3 @@
 # Covid Case Tracking Portal
-A React portal that tracks the number of covid cases globally.
-
+A portal that uses Chart.js and the Mathdroid Covid-19 API to display global daily case counts of the novel coronavirus. The portal was built using React.
  
