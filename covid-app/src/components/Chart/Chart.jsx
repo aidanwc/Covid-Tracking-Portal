@@ -10,7 +10,6 @@ const Chart = ({data:{confirmed,recovered,deaths},country}) => {
         const fetchAPI = async () => {
             setDailyData(await fetchDailyData());
         }
-        console.log(dailyData);
         fetchAPI();
     },[]);
 
@@ -24,13 +23,14 @@ const Chart = ({data:{confirmed,recovered,deaths},country}) => {
              datasets: [{
                 data: dailyData.map(({confirmed}) => confirmed),
                 label: 'Infected',
-                borderColor:'#3333ff',
+                borderColor:'rgba(0,0,255,0.5)',
+                backgroundColor: 'rgba(0, 0, 255, 0.15)',
                 fill: true
              },{
                 data: dailyData.map(({deaths})=>deaths),
                 label: 'Deaths',
-                borderColor:'red',
-                backgroundColor: 'rgba(255,0,0,0.5)',
+                borderColor:'rgba(207, 2, 2, 0.85)',
+                backgroundColor: 'rgba(255, 0, 0, 0.5)',
                 fill: true
              }],
          }}
@@ -45,7 +45,7 @@ const Chart = ({data:{confirmed,recovered,deaths},country}) => {
               datasets: [
                 {
                   label: 'People',
-                  backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
+                  backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(47, 182, 166, 0.719)', 'rgba(207, 2, 2, 0.678)'],
                   data: [confirmed.value, recovered.value, deaths.value],
                 },
               ],
